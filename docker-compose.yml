@@ -1,0 +1,26 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "<YourStrong@Passw0rd>"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - redapp
+
+  app-java:
+    build:
+      context: ./app
+    ports:
+      - "8080:8080"
+    container_name: app-java-y
+    depends_on:
+      - sqlserver
+    networks:
+      - redapp
+
+networks:
+  redapp:
+    driver: bridge
