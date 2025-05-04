@@ -1,0 +1,22 @@
+# Ignora todos los archivos .jar
+\*.jar
+
+# Ignora el directorio build (si tienes uno)
+build/
+
+# Ignora los archivos .class (si es un proyecto Java)
+\*.class
+
+# Ignora los archivos de configuración del IDE de IntelliJ IDEA
+.idea/
+
+# Ignora el directorio de módulos de Node.js (si es un proyecto Node.js)
+node_modules/
+
+# Ignora los archivos de sistema de macOS
+.DS_Store
+
+# Ignora los archivos temporales de Eclipse
+.metadata/
+bin/
+tmp/
