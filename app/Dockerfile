@@ -5,8 +5,8 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia el JAR
-COPY sirh-2.0.jar .
+COPY app.jar .
 
 #Comando para ejecutar el jar
-CMD ["java", "-jar", "sirh-2.0.jar"]
+CMD ["java", "-jar", "app.jar"]
 
